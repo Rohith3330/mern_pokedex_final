@@ -26,7 +26,15 @@ const UserSchema =mongoose.Schema(
             required:true,
             default:
                 "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
-        }
+        },
+        roll:{
+            type:String,
+            required:true,
+        },
+        branch:{
+            type:String,
+            required:true,
+        },
     },
     {
         timestamps:true,
