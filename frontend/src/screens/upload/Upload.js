@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Thumb from '../../components/Thumb'
 // import NavBar from "./Navbar.js";
 //import "./App.css";
-const idx2class1 = {
+const idx2class1 ={
   0: "abomasnow",
   1: "abra",
   2: "absol",
@@ -813,7 +813,7 @@ const idx2class1 = {
   806: "zubat",
   807: "zweilous",
   808: "zygarde-50",
-};
+}; ;
 const Upload = () => {
   // usestate for setting a javascript
   // object for storing and using data
@@ -859,6 +859,7 @@ const Upload = () => {
   }
   async function handleImgUpload(event) {
     setAllpoke([]);
+    setProcessing(true);
     const {
       target: { files },
     } = event;
@@ -866,7 +867,7 @@ const Upload = () => {
     const _file = files[0];
     const fileData = await readImage(_file);
     setFile(fileData);
-    setProcessing(true);
+
   }
 
   const MODEL_HTTP_URL = "api/pokeml/classify";
@@ -981,7 +982,7 @@ const Upload = () => {
       </div>
       <div>
         {processing ? (
-          <p>Loading ...</p>
+          <h1>Loading ...</h1>
         ) : topkPredNames !== null ? (
           <div>
             {allpokemon && allpokemon.map( (pokemonStats, index) => 
